@@ -1,3 +1,4 @@
+"use strict";
 let employee = {
     employeeId: 1,
     name: "Ethan",

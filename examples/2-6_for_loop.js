@@ -1,3 +1,4 @@
+"use strict";
 //code that executes before the loop begins
 let count = 1;
 

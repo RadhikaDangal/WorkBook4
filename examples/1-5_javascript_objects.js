@@ -1,3 +1,4 @@
+"use strict";
 let message = "This is my message"; //string
 let amount = 29.99; //number
 let isApproved = false; //boolean

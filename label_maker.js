@@ -1,3 +1,4 @@
+"use strict";
 const contact = {
     name: "Radhika Dangal",
     address: "123 Sleepy Hollow Rd",
