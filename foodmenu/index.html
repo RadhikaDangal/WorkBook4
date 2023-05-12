@@ -1,73 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Menu</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.classless.min.css" />
-    
-</head>
-<body>
+  </head>
+  <body>
     <main>
-    <h1>Menu Options</h1>
-  <label for="category">Select a category:</label>
-  <select id="category">
-    <option value="drinks">Drinks</option>
-    <option value="entrees">Entrees</option>
-    <option value="desserts">Desserts</option>
-  </select>
-  <br>
-  <label for="items">Items:</label>
-  <select id="items" size="6"></select>
-  </main>
-  
-<script>
+      <h1>Menu Options</h1>
+      <label for="category">Select a category:</label>
+      <select id="category">
+        <option value="drinks">Drinks</option>
+        <option value="entrees">Entrees</option>
+        <option value="desserts">Desserts</option>
+      </select>
+      <br />
+      <label for="items">Items:</label>
+      <select id="items" size="6"></select>
+    </main>
 
-let menu = {
-drinks : [
- "Water", "Tea", "Sweet Tea", 
- "Coke", "Dr. Pepper", "Sprite"
- ],
-entrees : [
-"Hamburger w/ Fries", 
- "Grilled Cheese w/ Tater Tots",
-"Grilled Chicken w/ Veggies", 
- "Chicken Fried Steak w/ Mashed Potatoes",
-"Fried Shrimp w/ Coleslaw", 
- "Veggie Plate"
-],
-desserts: [
- "Cheesecake", "Chocolate Cake", "Snickerdoodle Cookie"
- ]
-};
+    <script>
+      let menu = {
+        drinks: ["Water", "Tea", "Sweet Tea", "Coke", "Dr. Pepper", "Sprite"],
+        entrees: [
+          "Hamburger w/ Fries",
+          "Grilled Cheese w/ Tater Tots",
+          "Grilled Chicken w/ Veggies",
+          "Chicken Fried Steak w/ Mashed Potatoes",
+          "Fried Shrimp w/ Coleslaw",
+          "Veggie Plate",
+        ],
+        desserts: ["Cheesecake", "Chocolate Cake", "Snickerdoodle Cookie"],
+      };
 
-// Get the dropdown and listbox elements
-const categoryDropdown = document.getElementById("category");
-const itemsListbox = document.getElementById("items");
+      // Get the dropdown and listbox elements
+      const categoryDropdown = document.getElementById("category");
+      const itemsListbox = document.getElementById("items");
 
-// Add an event listener to the dropdown to handle changes
-categoryDropdown.addEventListener("change", function() {
-  // Clear any existing items in the listbox
-  itemsListbox.innerHTML = "";
+      // Add an event listener to the dropdown to handle changes
+      categoryDropdown.addEventListener("change", function () {
+        // Clear any existing items in the listbox
+        itemsListbox.innerHTML = "";
 
-  // Get the selected category
-  const category = categoryDropdown.value;
+        // Get the selected category
+        const category = categoryDropdown.value;
 
-  // Get the corresponding items from the menu object
-  const categoryItems = menu[category];
+        // Get the corresponding items from the menu object
+        const categoryItems = menu[category];
 
-  // Add each item to the listbox
-  for (let i = 0; i < categoryItems.length; i++) {
-    const item = categoryItems[i];
-    const option = document.createElement("option");
-    option.text = item;
-    itemsListbox.add(option);
-  }
-});
-</script>
-  
-<script src="script.js"></script>
+        // Add each item to the listbox
+        for (let i = 0; i < categoryItems.length; i++) {
+          const item = categoryItems[i];
+          const option = document.createElement("option");
+          option.text = item;
+          itemsListbox.add(option);
+        }
+      });
+    </script>
 
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
