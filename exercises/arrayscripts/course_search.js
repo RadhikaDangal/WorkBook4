@@ -35,22 +35,15 @@ let courses = [
     Fee: "50.00",
     }
    ];
-//  for (let index = 0; index <courses.length; index++) {
-//     const course = courses [index];
-//     if (course.CourseId == "PROJ200") {
-//         console.log(`The  ${course.CourseId} starts ${course.StartDate}`);
-//     }
+ for (let index = 0; index <courses.length; index++) {
+    const course = courses [index];
+    if (course.CourseId == "PROJ200") {
+        console.log(`The  ${course.CourseId} starts ${course.StartDate}`);
+    }
 
-    for (let index = 0; index <courses.length; index++) {
-        const course = courses [index];
-        if (course.Title == "Introduction to Angular") {
-            console.log(`The Title is ${course.title}`);
-        }
-
-    }   
-
+}
 
     
 
-}
+
  
